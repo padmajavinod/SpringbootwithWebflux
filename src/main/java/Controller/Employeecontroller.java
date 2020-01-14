@@ -13,6 +13,7 @@ import reactor.core.publisher.Mono;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@RestController
 public class Employeecontroller {
 
     @Autowired
@@ -48,4 +49,10 @@ public class Employeecontroller {
     public void deleteEmployee(@PathVariable("id") String id) {
         Employeefluxserviceimpl.deleteEmployee(id);
     }
+
+
+//    public void getbyid()
+//    {
+//
+//    }
 }
