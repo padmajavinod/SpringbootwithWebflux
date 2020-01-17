@@ -1,7 +1,7 @@
 package Controller;
 
 import Employee.Empinfo;
-import Empservices.Employeefluxserviceimpl;
+import Empservices.Employeefluxservice;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ import reactor.core.publisher.Mono;
 public class Employeecontroller {
 
     @Autowired
-    private Employeefluxserviceimpl Employeefluxserviceimpl;
+    private Employeefluxservice Employeefluxserviceimpl;
 
 
 
@@ -47,6 +47,7 @@ public class Employeecontroller {
     @ResponseStatus(value = HttpStatus.OK)
     @DeleteMapping(value = "/deleteEmployee/{id}")
     public void deleteEmployee(@PathVariable("id") String id) {
+
         Employeefluxserviceimpl.deleteEmployee(id);
     }
 

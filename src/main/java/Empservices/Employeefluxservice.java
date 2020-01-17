@@ -6,7 +6,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
-public interface Employeefluxserviceimpl {
+public interface Employeefluxservice {
 
     public Mono<Empinfo> createEmployee(Empinfo Empinfo);
 

@@ -12,6 +12,6 @@ public interface EmployeeCrudRepository extends ReactiveCrudRepository<Empinfo, 
 
     Flux<Empinfo> findAllByName(String name);
 
-    Mono<Empinfo> findFirstBySalary(Mono<String> salary);
+    Mono<Empinfo> findFirstBySalary(String salary);
 
 }
